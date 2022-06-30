@@ -24,7 +24,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       } catch (err) {
         res.status(400).send(err);
       }
-      break;
+    break;
   }
 };
 
