@@ -7,3 +7,7 @@ export interface IntentType {
   training_data: [TrainingType];
   response: Array<string>;
 }
+
+export interface ClassifyRequestType {
+  question: string;
+}
