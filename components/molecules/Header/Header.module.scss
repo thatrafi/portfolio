@@ -5,13 +5,13 @@
   ul {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
     gap: 1rem;
     li {
       list-style: none;
       display: flex;
       flex-direction: row;
       align-items: center;
-      padding: 12px 24px;
       height: 48px;
       position: relative;
       a {

@@ -9,3 +9,15 @@ $medium: 500;
   font-style: normal;
   line-height: $lineHeight;
 }
+
+a{
+  @include fontStyle(15px, 500, 21px)
+}
+
+p{
+  @include fontStyle(17px, 400, 24px)
+}
+
+h5{
+  @include fontStyle(24px, 500, 32px)
+}

@@ -1,0 +1,16 @@
+.row {
+  min-height: 568px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.center{
+  align-items: center;
+}
+
+.fit {
+  min-height: fit-content;
+}
