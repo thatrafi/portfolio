@@ -18,6 +18,15 @@ p{
   @include fontStyle(17px, 400, 24px)
 }
 
+span{
+  @include fontStyle(17px, 500, 24px)
+}
+
 h5{
   @include fontStyle(24px, 500, 32px)
+}
+
+.caption{
+  @include fontStyle(12px, 400, 16px);
+  color: rgba(0, 0, 0, 0.38);
 }
