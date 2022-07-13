@@ -1,15 +1,17 @@
 import React from 'react';
-import styles from './RoundedImage.module.scss';
 import Image from 'next/image';
+import styles from './Image.module.scss';
 import { MapPropsToStyles } from '../../../utils/MapPropsToStyles';
 import { ImageSize } from '../../../data/types/UI/types';
+import clsx from 'clsx';
 
 interface Props {
   src?: string;
   size: ImageSize;
+  classes?: string;
 }
 
-const RoundedImage: React.FC<Props> = ({ src, size }) => {
+const CustomImage: React.FC<Props> = ({ src, size, classes }) => {
   var img = '';
   var fileName = src;
   var sizeClass = MapPropsToStyles(styles,size);
@@ -22,7 +24,7 @@ const RoundedImage: React.FC<Props> = ({ src, size }) => {
   }
 
   return (
-    <div className={`${styles.imgRounded} ${sizeClass}`}>
+    <div className={clsx(styles.wrapper, sizeClass, classes)}>
       <Image
         src={img}
         alt={fileName}
@@ -31,4 +33,4 @@ const RoundedImage: React.FC<Props> = ({ src, size }) => {
   );
 };
 
-export default RoundedImage;
+export default CustomImage;

@@ -1,0 +1,21 @@
+import * as Icons from '../../../assets/icons';
+import Image from 'next/image';
+
+export const iconSet = {
+  arrowRight: Icons.ArrowRight,
+  arrowCute: Icons.ArrowBlack,
+  default: Icons.Default
+};
+
+interface Props {
+  // type: string;
+  type?: keyof typeof iconSet;
+}
+
+const Icon: React.FC<Props> = (props) => {
+  const { type } = props;
+
+  return <Image src={type ? iconSet[type] : iconSet['default']} width="18px" height="3px" />;
+};
+
+export default Icon;

@@ -1,7 +1,10 @@
 import type { NextPage } from 'next';
-import RoundedImage, { ImageSize } from '../components/atoms/RoundedImage';
+import RoundedImage from '../components/atoms/RoundedImage';
 import Row from '../components/atoms/Row/Row';
 import ContentLink from '../components/molecules/ContentLink';
+import ProjectCollections from '../components/organisms/ProjectCollections';
+import { DUMMY_PROJECTS } from '../data/dummies/projects';
+import { ImageSize } from '../data/types/UI/types';
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +16,13 @@ const Home: NextPage = () => {
           description="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
           linkText="Take me to the magic land"
           linkTo="/"
+        />
+      </Row>
+      <Row>
+        <ProjectCollections
+          data={DUMMY_PROJECTS}
+          title="Recent Projects"
+          isThumbnail
         />
       </Row>
 

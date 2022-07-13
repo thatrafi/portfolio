@@ -13,7 +13,7 @@ const ContentLink: React.FC<Props> = ({description, title, linkText, linkTo}) =>
     <div className={styles.contentLinkWrapper}>
       {title && <h5>{title}</h5>}
       {description && <p>{description}</p>}
-      <CustomLink to={linkTo} withArrow>
+      <CustomLink to={linkTo} withArrow arrowType='arrowCute'>
         {linkText}
       </CustomLink>
     </div>
