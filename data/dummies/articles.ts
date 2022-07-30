@@ -1,20 +1,18 @@
-import { ProjectCollection } from '../types/UI/types';
+import { BlogType } from '../types/UI/types';
 
-export const DUMMY_PROJECTS: Array<ProjectCollection> = [
+export const DUMMY_BLOGS: Array<BlogType> = [
   {
     startDate: '2018',
     endDate: null,
-    name: 'Project A',
+    title: 'Project A',
     description:
       'Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.',
-    link: '/',
   },
   {
     startDate: '2019',
     endDate: null,
-    name: 'Project B',
+    title: 'Project B',
     description:
       'Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.',
-    link: '/',
   },
 ];
