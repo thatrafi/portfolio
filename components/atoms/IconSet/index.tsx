@@ -8,7 +8,6 @@ export const iconSet = {
 };
 
 interface Props {
-  // type: string;
   type?: keyof typeof iconSet;
 }
 

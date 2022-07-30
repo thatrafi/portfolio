@@ -11,7 +11,7 @@ interface Props{
 const ContentLink: React.FC<Props> = ({description, title, linkText, linkTo}) => {
   return (
     <div className={styles.contentLinkWrapper}>
-      {title && <h5>{title}</h5>}
+      {title && <span>{title}</span>}
       {description && <p>{description}</p>}
       <CustomLink to={linkTo} withArrow arrowType='arrowCute'>
         {linkText}

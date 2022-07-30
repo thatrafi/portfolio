@@ -21,10 +21,10 @@ const Header: React.FC = () => {
           <li className={router.pathname == '/projects' ? styles.active : ''}>
             <Link href="/projects">Projects</Link>
           </li>
-          <li className={router.pathname == '/about' ? styles.active : ''}>
-            <Link href="/about">About</Link>
+          <li className={router.pathname == '/blogs' ? styles.active : ''}>
+            <Link href="/blogs">Blogs</Link>
           </li>
-          <li>
+          <li className={router.pathname == '/chat' ? styles.active : ''}>
             <Link href="/chat">Chat with me</Link>
           </li>
         </ul>
