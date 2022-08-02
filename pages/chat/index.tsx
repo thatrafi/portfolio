@@ -8,10 +8,10 @@ import Chatbot, {
 const ChatbotPage: React.FC = () => {
   const [messages, setMessages] = useState<MessageStateList>([]);
   const userReplyHandler = (data: MessageState) => {
-    setMessages((prevState) => [...prevState, data]);
+    setMessages((prevState: any) => [...prevState, data]);
     setTimeout(function () {
       //your code to be executed after 1 second
-      setMessages((prevState) => [
+      setMessages((prevState: any) => [
         ...prevState,
         { message: 'Typing....', type: 'receipt', timeStamp: 'now' },
       ]);
@@ -19,7 +19,7 @@ const ChatbotPage: React.FC = () => {
 
     setTimeout(function () {
       //your code to be executed after 1 second
-      setMessages((prevState) => {
+      setMessages((prevState: any) => {
         const newData = [...prevState];
         newData[newData.length - 1] = { message: 'ugh', type: 'receipt', timeStamp: 'now' };
         return newData;
