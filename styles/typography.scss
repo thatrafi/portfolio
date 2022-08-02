@@ -1,0 +1,11 @@
+$font-family: 'Inter', sans-serif;
+$regular: 400;
+$medium: 500;
+
+@mixin fontStyle($size, $weight, $lineHeight) {
+  font-family: $font-family;
+  font-weight: $weight;
+  font-size: $size;
+  font-style: normal;
+  line-height: $lineHeight;
+}

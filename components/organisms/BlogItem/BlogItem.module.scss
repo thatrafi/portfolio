@@ -1,0 +1,15 @@
+@import '../../../styles/colors.scss';
+
+.wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 16px;
+  a {
+    text-decoration: none;
+    color: $color-headline;
+    &:hover {
+      color: blue;
+      text-decoration: underline;
+    }
+  }
+}
