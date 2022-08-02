@@ -7,7 +7,16 @@ import Chatbot, {
 
 const ChatbotPage: React.FC = () => {
   const [messages, setMessages] = useState<MessageStateList>([]);
-  const userReplyHandler = (data: MessageState) => {
+  const userReplyHandler = async (data: MessageState) => {
+    const response = await fetch('/api/classify', {
+      method: 'POST',
+      body: JSON.stringify({ question: data.message }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    const botReply = await response.json();
+    
     setMessages((prevState) => [...prevState, data]);
     setTimeout(function () {
       //your code to be executed after 1 second
@@ -21,7 +30,11 @@ const ChatbotPage: React.FC = () => {
       //your code to be executed after 1 second
       setMessages((prevState) => {
         const newData = [...prevState];
-        newData[newData.length - 1] = { message: 'ugh', type: 'receipt', timeStamp: 'now' };
+        newData[newData.length - 1] = {
+          message: botReply.response,
+          type: 'receipt',
+          timeStamp: 'now',
+        };
         return newData;
       });
     }, 2000);
