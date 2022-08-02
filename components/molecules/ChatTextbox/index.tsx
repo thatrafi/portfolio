@@ -3,9 +3,15 @@ import Icon from '../../atoms/IconSet';
 import TextBox from '../../atoms/TextBox';
 import style from './ChatTextbox.module.scss';
 
-const ChatTextbox: React.FC = () => {
+interface Props {
+  onUserTyped?: Function;
+}
+
+const ChatTextbox: React.FC<Props> = ({ onUserTyped }) => {
   const textboxRef = useRef<HTMLInputElement>(null);
-  const handler = () => console.log(textboxRef.current?.value);
+  const handler = () => {
+    onUserTyped && onUserTyped(textboxRef.current?.value);
+  };
 
   return (
     <div className={style.wrapper}>

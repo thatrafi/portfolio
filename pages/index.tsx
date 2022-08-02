@@ -7,11 +7,12 @@ import ProjectCollections from '../components/organisms/ProjectCollections';
 import { DUMMY_BLOGS } from '../data/dummies/articles';
 import { DUMMY_PROJECTS } from '../data/dummies/projects';
 import { ImageSize } from '../data/types/UI/types';
+import style from './Home.module.scss';
 
 const Home: NextPage = () => {
   return (
     <div>
-      <Row>
+      <Row style={style.home}>
         <RoundedImage src="rafi.png" size={ImageSize.BIG} />
         <ContentLink
           title="I craft interfaces"
