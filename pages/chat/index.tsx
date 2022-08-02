@@ -13,7 +13,7 @@ const ChatbotPage: React.FC = () => {
       //your code to be executed after 1 second
       setMessages((prevState) => [
         ...prevState,
-        { message: 'Typing...', type: 'receipt', timeStamp: 'now' },
+        { message: 'Typing....', type: 'receipt', timeStamp: 'now' },
       ]);
     }, 1000);
 
