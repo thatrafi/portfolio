@@ -1,12 +1,17 @@
+@import 'styles/master.scss';
+
 .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
-  height: 640px;
+  height: 600px;
   align-content: stretch;
-  &:nth-child(1){
-    flex-grow: 1;
+  @include responsive(pc) {
+    height: 640px;
+    &:nth-child(1){
+      flex-grow: 1;
+    }
   }
 }
 

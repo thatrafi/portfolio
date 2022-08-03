@@ -1,4 +1,4 @@
-@import 'styles/colors.scss';
+@import 'styles/master.scss';
 
 .header {
   position: relative;
@@ -6,7 +6,11 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    gap: 1rem;
+    padding-bottom: 4rem;
+    @include responsive(pc) {
+      gap: 1rem;
+      padding-bottom: 0;
+    }
     li {
       list-style: none;
       display: flex;
