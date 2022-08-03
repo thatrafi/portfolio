@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import ChatbotHeader from '../../molecules/ChatbotHeader';
 import ChatBubble from '../../molecules/ChatBubble';
 import ChatTextbox from '../../molecules/ChatTextbox';
