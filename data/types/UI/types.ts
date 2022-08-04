@@ -14,6 +14,7 @@ export interface ProjectCollection{
   name: string;
   description: string;
   link: string;
+  platform: string;
   imgSrc?: string;
 }
 

@@ -7,9 +7,11 @@
   flex-direction: column;
   justify-content: flex-start;
   box-sizing: border-box;
+  padding-bottom: 5rem;
   @include responsive(pc) {
     min-height: 624px;
     justify-content: center;
+    margin-top: 1rem;
   }
 }
 
