@@ -1,7 +1,7 @@
 import ContentLink from '../../molecules/ContentLink';
 import styles from './ProjectItem.module.scss';
 import Image from '../../atoms/Image';
-import { ImageSize } from '../../../data/types/UI/types'
+import { ImageSize } from '../../../data/types/UI/types';
 
 interface Props {
   startDate?: string;
@@ -10,6 +10,7 @@ interface Props {
   description?: string;
   link?: string;
   imgSrc?: string;
+  platform?: string;
 }
 
 const ProjectItem: React.FC<Props> = ({
@@ -19,15 +20,21 @@ const ProjectItem: React.FC<Props> = ({
   description = 'Fill your project brief here. It can be the outcome of the project, or some success metrics, or a cheesy tagline.',
   link = '/',
   imgSrc = 'placeholder.png',
+  platform,
 }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.contentWrapper}>
-        <span className='caption'>
+        <span className="caption">
           {startDate} - {endDate == null ? 'present' : endDate}
         </span>
+        {name && <h3>{name}</h3>}
+        {platform && (
+          <span className="caption">
+            {platform}
+          </span>
+        )}
         <ContentLink
-          title={name}
           description={description}
           linkText="Try it out"
           linkTo={link}

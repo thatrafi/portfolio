@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useState } from 'react';
 import Row from '../../components/atoms/Row/Row';
 import Chatbot, {
@@ -16,7 +17,7 @@ const ChatbotPage: React.FC = () => {
       },
     });
     const botReply = await response.json();
-    
+
     setMessages((prevState) => [...prevState, data]);
     setTimeout(function () {
       //your code to be executed after 1 second
@@ -40,9 +41,17 @@ const ChatbotPage: React.FC = () => {
     }, 2000);
   };
   return (
-    <Row>
-      <Chatbot onUserReply={userReplyHandler} messages={messages} />
-    </Row>
+    <>
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+        />
+      </Head>
+      <Row>
+        <Chatbot onUserReply={userReplyHandler} messages={messages} />
+      </Row>
+    </>
   );
 };
 

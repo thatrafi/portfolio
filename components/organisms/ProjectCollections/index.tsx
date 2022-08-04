@@ -26,6 +26,7 @@ const ProjectCollections: React.FC<Props> = ({
             description={p.description}
             link={p.link}
             name={p.name}
+            platform={p.platform}
           />
         ))}
       {isThumbnail && (
