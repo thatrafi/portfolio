@@ -1,4 +1,4 @@
-import { BlogType } from '../../../data/types/UI/types';
+import { BlogType } from '../../../data/types';
 import CustomLink from '../../atoms/CustomLink';
 import BlogItem from '../BlogItem';
 import styles from './BlogCollections.module.scss';
@@ -19,14 +19,10 @@ const BlogCollections: React.FC<Props> = ({
       {title && <span>{title}</span>}
       {data &&
         data.map((p, key) => (
-          <BlogItem
-            key={key}
-            content={p}
-            link={`/blogs/${key}`}
-          />
+          <BlogItem key={key} content={p} link={`/blogs/${p.id}`} />
         ))}
       {isThumbnail && (
-        <CustomLink to="/blogs" withArrow arrowType='arrowRight'>
+        <CustomLink to="/blogs" withArrow arrowType="arrowRight">
           <span>View all blogs</span>
         </CustomLink>
       )}

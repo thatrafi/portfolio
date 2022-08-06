@@ -1,4 +1,4 @@
-import { BlogType } from '../../../data/types/UI/types';
+import { BlogType } from '../../../data/types';
 import styles from './BlogItem.module.scss';
 import Link from 'next/link';
 
@@ -11,10 +11,7 @@ const BlogItem: React.FC<Props> = ({ content = null, link }) => {
   return (
     content && (
       <div className={styles.wrapper}>
-        <span className="caption">
-          {content.startDate} -
-          {content.endDate == null ? 'present' : content.endDate}
-        </span>
+        <span className="caption">{content.date}</span>
         {content.title && link ? (
           <Link href={link}>{content.title}</Link>
         ) : (

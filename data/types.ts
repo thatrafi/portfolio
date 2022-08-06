@@ -21,3 +21,11 @@ export interface ProjectType {
 export interface ClassifyRequestType {
   question: string;
 }
+
+export interface BlogType{
+  title: string;
+  date: string;
+  description: string;
+  imgSrc?: string;
+  id: string;
+}
