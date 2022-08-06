@@ -17,11 +17,3 @@ export interface ProjectCollection{
   platform: string;
   imgSrc?: string;
 }
-
-export interface BlogType{
-  title: string;
-  startDate: string;
-  endDate: string | null;
-  description: string;
-  imgSrc?: string;
-}

@@ -8,9 +8,12 @@ interface Props {
 }
 
 const ChatTextbox: React.FC<Props> = ({ onUserTyped }) => {
-  const textboxRef = useRef<HTMLInputElement>(null);
+  let textboxRef = useRef<HTMLInputElement>(null);
   const handler = () => {
     onUserTyped && onUserTyped(textboxRef.current?.value);
+    if (null !== textboxRef.current) {
+      textboxRef.current.value = '';
+    }
   };
 
   return (

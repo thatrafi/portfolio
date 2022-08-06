@@ -5,6 +5,9 @@ export const iconSet = {
   arrowRight: Icons.ArrowRight,
   arrowCute: Icons.ArrowBlack,
   airPlane: Icons.AirPlane,
+  linkedIn: Icons.LinkedIn,
+  github: Icons.Github,
+  mail: Icons.Mail,
   default: Icons.Default,
 };
 

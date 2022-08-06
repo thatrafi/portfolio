@@ -13,14 +13,20 @@
 .big {
   min-height: 200px;
   min-width: 200px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .medium {
   min-width: 145px;
   min-height: 145px;
+  max-width: 145px;
+  max-height: 145px;
 }
 
 .small {
   min-height: 100px;
   min-width: 100px;
+  max-width: 100px;
+  max-height: 100px;
 }

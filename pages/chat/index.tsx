@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Row from '../../components/atoms/Row/Row';
 import Chatbot, {
   MessageState,
@@ -8,6 +8,31 @@ import Chatbot, {
 
 const ChatbotPage: React.FC = () => {
   const [messages, setMessages] = useState<MessageStateList>([]);
+
+  useEffect(() => {
+    setMessages((prevState) => {
+      const newData = [...prevState];
+        newData[0] = {
+          message: 'Typing....',
+          type: 'receipt',
+          timeStamp: 'now',
+        };
+        return newData;
+    });
+    setTimeout(function () {
+      //your code to be executed after 1 second
+      setMessages((prevState) => {
+        const newData = [...prevState];
+        newData[0] = {
+          message: 'Hey ya!',
+          type: 'receipt',
+          timeStamp: 'now',
+        };
+        return newData;
+      });
+    }, 1000);
+  }, []);
+
   const userReplyHandler = async (data: MessageState) => {
     const response = await fetch('/api/classify', {
       method: 'POST',
