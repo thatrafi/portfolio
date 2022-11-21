@@ -14,7 +14,7 @@ const BlogPage: React.FC<Props> = ({ blogs }) => {
   return (
     <Row style={style.blog}>
       {blogs ? (
-        <BlogCollections data={blogs} title="All Blogs" />
+        <BlogCollections data={blogs} title="All Blog Posts" />
       ): <h1>No blog posts available</h1>}
     </Row>
   );
